@@ -10,9 +10,9 @@ def home(request):
             form.save()
     else:
         form = UserForm()
-    userList = User.objects.all()
+    userlist = User.objects.all()
     context = {
         'uf': form,
-        'ul': userList,
+        'ul': userlist,
     }
     return render(request, 'home.html', context)

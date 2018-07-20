@@ -10,6 +10,7 @@ class User(models.Model):
     birth = models.DateField()
     email = models.EmailField()
     address = models.CharField(max_length=100)
+    owner = models.ForeignKey('Blog', on_delete=models.CASCADE,)
 
     def __str__(self):
         return self.lastName

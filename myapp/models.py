@@ -11,8 +11,14 @@ class User(models.Model):
     email = models.EmailField()
     address = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.lastName
+
 
 class Blog(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
     date = models.DateTimeField()
+
+    def __str__(self):
+        return self.title
